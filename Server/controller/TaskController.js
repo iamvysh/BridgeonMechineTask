@@ -21,10 +21,15 @@ const taskModel=require("../model/TaskShema")
 
     }
 const updateNote=async(req,res)=>{
+
+   
         const id=req.params.id
         const title=req.body.title
         const description=req.body.description
         const color=req.body.color
+        if(req.body.color==null){
+          color='red'
+        }
 
         const Task=await taskModel.findByIdAndUpdate(id,{$set:{title,description,color}},{new:true})
 
@@ -45,6 +50,7 @@ const updateNote=async(req,res)=>{
 
   const deleteATask=async(req,res)=>{
     const id=req.params.id
+    console.log("id",id);
      
     const deleteTask=await taskModel.findByIdAndDelete(id)
       

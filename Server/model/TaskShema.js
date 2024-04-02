@@ -6,8 +6,8 @@ const taskSchema = new mongoose.Schema({
   description: String,
   color: {
     type: String,
-        enum : ['green',"orange",'red'],
-        default: 'red',    
+        enum : ['green',"orange","red"],
+        default: "red",    
   },
 
 
