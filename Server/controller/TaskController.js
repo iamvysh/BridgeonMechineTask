@@ -66,3 +66,9 @@ const updateNote=async(req,res)=>{
 
 
  module.exports={addTask,updateNote,getAllTasks,deleteATask}
+
+
+
+
+
+//  const a = [1, 4, 34, 453, 4, 34]

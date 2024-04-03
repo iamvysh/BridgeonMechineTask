@@ -40,7 +40,7 @@ const AllTask = () => {
   const FetchAlltasks = async () => {
     try {
       const response = await axios.get("http://localhost:3001/api/allnotes");
-      if (response.status === 200) {
+      if (response && response.status === 200) {
         setTask(response.data.data);
       }
       console.log(response);

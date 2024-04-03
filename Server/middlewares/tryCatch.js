@@ -4,6 +4,11 @@ const tryCatchMiddleware = (handler) => {
         await handler(req, res, next);
       } catch (error) {
         console.error(error);
+        // switch (res.status) {
+        //   case 404:
+
+        //   case 403
+        // }
         res.status(500);
         res.json({
           status: "failure",

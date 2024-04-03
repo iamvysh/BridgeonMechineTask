@@ -30,6 +30,10 @@ const AddTask = () => {
       };
       console.log(data);
 
+      if(data.title.length==0&&data.description.length==0){
+        return alert ("fields are empty ,please add something")
+      }
+
       const response = await axios.post(
         "http://localhost:3001/api/addnote",
         data
